@@ -16,12 +16,8 @@ pip install -U teson
 - **Single Function API**: One function call handles all conversions
 - **Automatic Structure Detection**: Intelligently identifies flat vs nested JSON
 - **Nested Data Flattening**: Creates one row per leaf-level record with inherited parent data
-- **Original Field Names**: Preserves your original JSON field names in CSV headers
 - **Array Handling**: Joins array values with pipe separator
-- **Token Efficient**: CSV format reduces token usage compared to JSON for LLM consumption
-- **Zero Dependencies**: Uses Python standard library only
 - **High Performance**: Processes 10,000+ records in under 50ms
-- **Error Handling**: Raises `TesonError` for invalid inputs or conversion failures
 
 ## 🚀 Getting Started
 
@@ -100,30 +96,6 @@ print(csv_output)
 ```
 id,name
 1,Alice
-```
-
-### 📊 GitHub Repository Data Example
-
-```python
-github_data = [{
-    "id": 28457823,
-    "name": "freeCodeCamp",
-    "repository": "freeCodeCamp/freeCodeCamp",
-    "description": "freeCodeCamp.org's open-source codebase",
-    "created": "2014-12-24T17:49:19Z",
-    "stars": 430886,
-    "forks": 42146,
-    "branch": "main"
-}]
-
-csv_output = encode(github_data)
-print(csv_output)
-```
-
-**Output:**
-```
-branch,created,description,forks,id,name,repository,stars
-main,2014-12-24T17:49:19Z,freeCodeCamp.org's open-source codebase,42146,28457823,freeCodeCamp,freeCodeCamp/freeCodeCamp,430886
 ```
 
 ### 🏢 Employee Hierarchy Example
@@ -232,6 +204,8 @@ Run usage examples:
 
 ```bash
 python example.py
+python test_llm_actual.py
+python test_token_cost.py
 ```
 
 ## 📈 Performance
@@ -265,16 +239,8 @@ The library implements a state machine that:
 1. **Detects Structure**: Analyzes JSON to identify nested vs flat format
 2. **Processes Data**: Routes to appropriate processor (nested/flat)
 3. **Flattens Records**: Creates one row per leaf-level record with parent context
-4. **Preserves Field Names**: Maintains original JSON field names in CSV headers
 5. **Handles Arrays**: Joins array values with pipe separator
 6. **Generates CSV**: Produces standard CSV format output
-
-## 📦 What's Included
-
-- `encode()` - Main conversion function
-- `TesonError` - Custom exception class
-- Usage examples
-- Full documentation
 
 
 ## 📃 License
