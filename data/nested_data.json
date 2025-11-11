@@ -1,0 +1,284 @@
+{
+    "headphones": [
+        {
+            "product_id": "HP001",
+            "name": "Acoustic Voyager X",
+            "type": "Over-Ear",
+            "price": 249.99,
+            "specs": {
+                "brand": "AudioZen",
+                "color": "Matte Black",
+                "connection": "Bluetooth 5.2",
+                "noise_cancellation": true,
+                "battery_hours": 30,
+                "driver_size_mm": 40,
+                "impedance_ohms": 32,
+                "mic_included": true,
+                "foldable_design": true,
+                "warranty_years": 2
+            },
+            "inventory": {
+                "stock_level": 120,
+                "warehouse_location": "HP-Aisle-1A"
+            },
+            "tags": [
+                "wireless",
+                "premium",
+                "travel",
+                "noise-cancelling"
+            ]
+        },
+        {
+            "product_id": "HP002",
+            "name": "SportBuds Pro",
+            "type": "In-Ear (TWS)",
+            "price": 99.50,
+            "specs": {
+                "brand": "FitSound",
+                "color": "Neon Green",
+                "connection": "Bluetooth 5.0",
+                "noise_cancellation": false,
+                "battery_hours": 6,
+                "driver_size_mm": 8,
+                "impedance_ohms": 16,
+                "mic_included": true,
+                "foldable_design": false,
+                "warranty_years": 1
+            },
+            "inventory": {
+                "stock_level": 350,
+                "warehouse_location": "HP-Bin-3C"
+            },
+            "tags": [
+                "sport",
+                "waterproof",
+                "true-wireless",
+                "budget"
+            ]
+        },
+        {
+            "product_id": "HP003",
+            "name": "Studio Monitor Classic",
+            "type": "On-Ear",
+            "price": 175.00,
+            "specs": {
+                "brand": "ProTune",
+                "color": "Silver",
+                "connection": "Wired (3.5mm)",
+                "noise_cancellation": false,
+                "battery_hours": 0,
+                "driver_size_mm": 50,
+                "impedance_ohms": 80,
+                "mic_included": false,
+                "foldable_design": true,
+                "warranty_years": 3
+            },
+            "inventory": {
+                "stock_level": 80,
+                "warehouse_location": "HP-Rack-2B"
+            },
+            "tags": [
+                "studio",
+                "wired",
+                "professional",
+                "monitoring"
+            ]
+        },
+        {
+            "product_id": "HP004",
+            "name": "Urban Flow ANC",
+            "type": "Over-Ear",
+            "price": 129.99,
+            "specs": {
+                "brand": "CityBeat",
+                "color": "Ocean Blue",
+                "connection": "Bluetooth 5.1",
+                "noise_cancellation": true,
+                "battery_hours": 24,
+                "driver_size_mm": 40,
+                "impedance_ohms": 32,
+                "mic_included": true,
+                "foldable_design": false,
+                "warranty_years": 1
+            },
+            "inventory": {
+                "stock_level": 210,
+                "warehouse_location": "HP-Aisle-1B"
+            },
+            "tags": [
+                "commute",
+                "bluetooth",
+                "active-noise-cancellation",
+                "value"
+            ]
+        },
+        {
+            "product_id": "HP005",
+            "name": "Ultra Mini Buds",
+            "type": "In-Ear (TWS)",
+            "price": 59.99,
+            "specs": {
+                "brand": "PicoAudio",
+                "color": "White",
+                "connection": "Bluetooth 5.0",
+                "noise_cancellation": false,
+                "battery_hours": 4,
+                "driver_size_mm": 6,
+                "impedance_ohms": 16,
+                "mic_included": true,
+                "foldable_design": false,
+                "warranty_years": 1
+            },
+            "inventory": {
+                "stock_level": 500,
+                "warehouse_location": "HP-Bin-3D"
+            },
+            "tags": [
+                "mini",
+                "cheap",
+                "true-wireless",
+                "everyday"
+            ]
+        },
+        {
+            "product_id": "HP006",
+            "name": "Elite Gaming Headset",
+            "type": "Over-Ear",
+            "price": 199.00,
+            "specs": {
+                "brand": "GameForce",
+                "color": "Cosmic Red",
+                "connection": "USB-C/Wireless 2.4GHz",
+                "noise_cancellation": false,
+                "battery_hours": 15,
+                "driver_size_mm": 50,
+                "impedance_ohms": 32,
+                "mic_included": true,
+                "foldable_design": false,
+                "warranty_years": 2
+            },
+            "inventory": {
+                "stock_level": 95,
+                "warehouse_location": "HP-Rack-4A"
+            },
+            "tags": [
+                "gaming",
+                "pc",
+                "console",
+                "wireless"
+            ]
+        },
+        {
+            "product_id": "HP007",
+            "name": "Traveler's Companion",
+            "type": "On-Ear",
+            "price": 79.99,
+            "specs": {
+                "brand": "GlobeTrek",
+                "color": "Sand Beige",
+                "connection": "Bluetooth 4.2",
+                "noise_cancellation": true,
+                "battery_hours": 18,
+                "driver_size_mm": 30,
+                "impedance_ohms": 24,
+                "mic_included": true,
+                "foldable_design": true,
+                "warranty_years": 1
+            },
+            "inventory": {
+                "stock_level": 250,
+                "warehouse_location": "HP-Aisle-1C"
+            },
+            "tags": [
+                "travel",
+                "foldable",
+                "budget",
+                "bluetooth"
+            ]
+        },
+        {
+            "product_id": "HP008",
+            "name": "Aura Hi-Fi",
+            "type": "Over-Ear (Open-Back)",
+            "price": 499.00,
+            "specs": {
+                "brand": "ClarityAudio",
+                "color": "Wood Grain",
+                "connection": "Wired (6.35mm)",
+                "noise_cancellation": false,
+                "battery_hours": 0,
+                "driver_size_mm": 60,
+                "impedance_ohms": 250,
+                "mic_included": false,
+                "foldable_design": false,
+                "warranty_years": 5
+            },
+            "inventory": {
+                "stock_level": 40,
+                "warehouse_location": "HP-Vault-01"
+            },
+            "tags": [
+                "audiophile",
+                "hifi",
+                "wired",
+                "premium"
+            ]
+        },
+        {
+            "product_id": "HP009",
+            "name": "Secure Fit Buds",
+            "type": "In-Ear",
+            "price": 35.00,
+            "specs": {
+                "brand": "ValueAudio",
+                "color": "Black",
+                "connection": "Wired (3.5mm)",
+                "noise_cancellation": false,
+                "battery_hours": 0,
+                "driver_size_mm": 9,
+                "impedance_ohms": 18,
+                "mic_included": true,
+                "foldable_design": false,
+                "warranty_years": 1
+            },
+            "inventory": {
+                "stock_level": 600,
+                "warehouse_location": "HP-Bin-4A"
+            },
+            "tags": [
+                "wired",
+                "basic",
+                "in-ear",
+                "earbuds"
+            ]
+        },
+        {
+            "product_id": "HP010",
+            "name": "Kids Safe Headphones",
+            "type": "On-Ear",
+            "price": 25.99,
+            "specs": {
+                "brand": "PandaPlay",
+                "color": "Rainbow",
+                "connection": "Bluetooth 5.0",
+                "noise_cancellation": false,
+                "battery_hours": 10,
+                "driver_size_mm": 30,
+                "impedance_ohms": 20,
+                "mic_included": false,
+                "foldable_design": true,
+                "warranty_years": 1
+            },
+            "inventory": {
+                "stock_level": 300,
+                "warehouse_location": "HP-Bin-4B"
+            },
+            "tags": [
+                "kids",
+                "on-ear",
+                "bluetooth",
+                "safe-volume"
+            ]
+        }
+    ]
+}
