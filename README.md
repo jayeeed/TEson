@@ -1,4 +1,4 @@
-![TEson Comparison](https://i.ibb.co.com/pBRjPJKm/comparison.png)
+![TEson Comparison](https://i.ibb.co.com/HDfW9bcj/comparison.png)
 
 ## TEson - Token-efficient structured object notation
 
