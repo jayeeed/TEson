@@ -155,12 +155,17 @@ Primary function to convert JSON data to CSV format.
 
 ## 🧪 Testing
 
-Run usage examples:
+```bash
+python tests/example.py
+python tests/test_llm_actual.py
+python tests/test_token_cost.py
+```
+
+## 🧪 Generate Data for Testing
 
 ```bash
-python example.py
-python test_llm_actual.py
-python test_token_cost.py
+python tests/generate_flat_data.py
+python tests/generate_nested_data.py
 ```
 
 ## 📈 Performance

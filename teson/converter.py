@@ -102,22 +102,17 @@ def _flatten_record(
             field_name = f"{prefix}{key}" if prefix else key
 
             if isinstance(value, dict):
-                # Store nested dict with its prefix for later processing
                 nested_items.append((field_name, value))
             elif isinstance(value, list):
                 if value and isinstance(value[0], dict):
-                    # Handle list of dicts - process each item
                     for item in value:
                         _flatten_record(item, new_parent, result, "")
                     return
                 else:
-                    # Handle simple list - join with pipe
                     new_parent[field_name] = "|".join(str(v) for v in value)
             else:
-                # Handle simple value
                 new_parent[field_name] = value
 
-        # Process nested dicts with proper prefixing
         if nested_items:
             for nested_key, nested_dict in nested_items:
                 for k, v in nested_dict.items():
