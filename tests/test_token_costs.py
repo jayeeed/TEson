@@ -1,11 +1,11 @@
 """
 Token Cost Comparison Test
-Compares token usage between original JSON and TEson-encoded CSV format
+Compares token usage between original JSON and TEson-decode_jsond CSV format
 """
 
 import json
 import tiktoken
-from teson import encode
+from teson import decode_json
 
 MODEL = "gpt-4o"
 
@@ -30,8 +30,8 @@ def main():
     flat_json_tokens = count_tokens(flat_json)
     nested_json_tokens = count_tokens(nested_json)
 
-    flat_csv = encode(flat_data)
-    nested_csv = encode(nested_data)
+    flat_csv = decode_json(flat_data)
+    nested_csv = decode_json(nested_data)
 
     flat_csv_tokens = count_tokens(flat_csv)
     nested_csv_tokens = count_tokens(nested_csv)

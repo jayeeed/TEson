@@ -8,7 +8,7 @@ import os
 from dotenv import load_dotenv
 import urllib.request
 import urllib.error
-from teson import encode
+from teson import decode_json
 
 load_dotenv()
 
@@ -64,8 +64,8 @@ def main():
     flat_json_tokens = call_openrouter(flat_json)
     nested_json_tokens = call_openrouter(nested_json)
 
-    flat_csv = encode(flat_data)
-    nested_csv = encode(nested_data)
+    flat_csv = decode_json(flat_data)
+    nested_csv = decode_json(nested_data)
 
     flat_csv_tokens = call_openrouter(flat_csv)
     nested_csv_tokens = call_openrouter(nested_csv)

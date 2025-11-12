@@ -10,7 +10,7 @@ from typing import Union, List, Dict, Any
 from .exceptions import TesonError
 
 
-def encode(data_in: Union[str, dict, List[dict]]) -> str:
+def decode_json(data_in: Union[str, dict, List[dict]]) -> str:
     try:
         if isinstance(data_in, str):
             data = json.loads(data_in)

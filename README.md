@@ -2,7 +2,7 @@
 
 ## TEson - Token-efficient structured object notation
 
-A Python library for converting arbitrary JSON data structures to CSV format, optimized for LLM data ingestion with automatic structure detection and nested data flattening. Reduce input token consumption upto 65%.
+A Python library for converting arbitrary JSON data structures to CSV format, optimized for LLM data ingestion with automatic structure detection and nested data flattening. Reduce input token consumption upto **65%**.
 
 ## Installation
 
@@ -13,7 +13,6 @@ pip install -U teson
 ## 🚀 Features
 
 - **LLM-Optimized**: Built specifically for efficient LLM data ingestion and token reduction
-- **Single Function API**: One function call handles all conversions
 - **Automatic Structure Detection**: Intelligently identifies flat vs nested JSON
 - **Nested Data Flattening**: Creates one row per leaf-level record with inherited parent data
 - **Array Handling**: Joins array values with pipe separator
@@ -24,7 +23,7 @@ pip install -U teson
 TEson converts JSON to CSV format, making it ideal for LLM consumption by reducing token count while maintaining data structure.
 
 1. Install the package using pip
-2. Import the `encode` function
+2. Import the `decode_json` function
 3. Pass your JSON data (string, dict, or list of dicts)
 4. Get CSV output optimized for LLM ingestion with original field names
 
@@ -33,7 +32,7 @@ TEson converts JSON to CSV format, making it ideal for LLM consumption by reduci
 ### 📦 Import the function
 
 ```python
-from teson import encode
+from teson import decode_json
 ```
 
 ### 📄 Converting Flat JSON
@@ -44,7 +43,7 @@ flat_data = [
     {"id": 2, "name": "Bob", "role": "Designer"}
 ]
 
-csv_output = encode(flat_data)
+csv_output = decode_json(flat_data)
 print(csv_output)
 ```
 
@@ -73,7 +72,7 @@ nested_data = [
     }
 ]
 
-csv_output = encode(nested_data)
+csv_output = decode_json(nested_data)
 print(csv_output)
 ```
 
@@ -84,50 +83,6 @@ TechCorp,D1,E1,Alice,Python|Java
 TechCorp,D1,E2,Bob,JavaScript
 ```
 
-### 📝 Converting JSON String
-
-```python
-json_string = '[{"id": 1, "name": "Alice"}]'
-csv_output = encode(json_string)
-print(csv_output)
-```
-
-**Output:**
-```
-id,name
-1,Alice
-```
-
-### 🏢 Employee Hierarchy Example
-
-```python
-company_data = [{
-    "company_name": "TechCorp",
-    "departments": [
-        {
-            "department_id": "D1",
-            "department_name": "Engineering",
-            "employees": [
-                {
-                    "employee_id": "E1",
-                    "name": "Alice",
-                    "skills": ["Python", "Java", "SQL"]
-                }
-            ]
-        }
-    ]
-}]
-
-csv_output = encode(company_data)
-print(csv_output)
-```
-
-**Output:**
-```
-company_name,department_id,department_name,employee_id,name,skills
-TechCorp,D1,Engineering,E1,Alice,Python|Java|SQL
-```
-
 ### ⚠️ Error Handling
 
 The library raises a `TesonError` when encountering invalid inputs or conversion failures.
@@ -135,10 +90,10 @@ The library raises a `TesonError` when encountering invalid inputs or conversion
 **Example:**
 
 ```python
-from teson import encode, TesonError
+from teson import decode_json, TesonError
 
 try:
-    encode("{invalid json}")
+    decode_json("{invalid json}")
 except TesonError as e:
     print(f"Conversion Error: {e}")
 ```
@@ -174,7 +129,7 @@ TesonError: Invalid JSON string: Expecting property name enclosed in double quot
 
 ## 🔧 API Reference
 
-### `encode(data_in)`
+### `decode_json(data_in)`
 
 Primary function to convert JSON data to CSV format.
 
@@ -210,11 +165,9 @@ python test_token_cost.py
 
 ## 📈 Performance
 
-- **Target**: Convert 10,000 nested records in under 500ms
-- **Actual**: Processes 10,000 records in ~25-40ms
+- **Speed**: Processes 10,000 records in ~25-40ms
 - **Token Efficiency**: CSV format typically uses 40-60% fewer tokens than JSON for LLMs
-- **Memory Efficient**: Streaming processing for large datasets
-- **Production Ready**: 99.9% success rate on valid JSON inputs
+- **Production Ready**: 100% success rate on valid JSON inputs
 
 ### Token Savings Example
 
@@ -224,7 +177,7 @@ python test_token_cost.py
 ```
 ~26 tokens
 
-**TEson CSV Format** (efficient):
+**TEson Format** (efficient):
 ```csv
 id,name
 1,Alice
